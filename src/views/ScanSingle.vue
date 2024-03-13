@@ -1,10 +1,20 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import router from "@/router";
 import type { CodeDetection } from "@pixelverse/strichjs-sdk";
 import Scanner from "@/components/Scanner.vue";
 
+const scanner = ref();
+const scanDialog = ref();
+const data = ref('');
+
 function onDetected(detections: CodeDetection[]) {
-  window.alert(`Scanned code: ${detections[0].data}`);
+  scanner.value?.stop();
+  data.value = detections[0].data;
+  scanDialog.value.showModal();
+}
+
+function finishScanning() {
   router.push({ path: '/', replace: true });
 }
 </script>
@@ -16,8 +26,16 @@ function onDetected(detections: CodeDetection[]) {
       <RouterLink to="/">EXIT</RouterLink>
     </header>
 
-    <Scanner @detected="onDetected"/>
+    <Scanner ref="scanner" @detected="onDetected"/>
   </main>
+
+  <dialog ref="scanDialog">
+    <p>Scanned code: <b>{{ data }}</b></p>
+
+    <div class="button-bar">
+      <button @click="finishScanning()">FINISH</button>
+    </div>
+  </dialog>
 </template>
 
 <style>
