@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "@pixelverse/strichjs-sdk": "^1.4.5",
+    "@pixelverse/strichjs-sdk": "^1.4.8",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
