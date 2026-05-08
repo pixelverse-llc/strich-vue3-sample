@@ -22,7 +22,7 @@ function finishScanning() {
 <template>
   <main class="wrapper">
     <header class="top-bar">
-      <h3>Single Barcode Scan</h3>
+      <h1>Single Barcode Scan</h1>
       <RouterLink to="/">EXIT</RouterLink>
     </header>
 
@@ -39,7 +39,6 @@ function finishScanning() {
 </template>
 
 <style>
-
 Scanner {
   height: 240px;
 }

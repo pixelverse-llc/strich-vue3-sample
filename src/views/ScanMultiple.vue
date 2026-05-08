@@ -19,16 +19,16 @@ async function onDetected(codeDetections: CodeDetection[]) {
 <template>
   <main class="wrapper">
     <header class="top-bar">
-      <h3>Multiple Scans</h3>
+      <h1>Multiple Scans</h1>
       <RouterLink to="/">EXIT</RouterLink>
     </header>
     <Scanner ref="scanner" @detected="onDetected"/>
-    <section class="barcode-grid">
+    <div class="barcode-grid">
       <div>{{ scannedCodes[0] }}</div>
       <div>{{ scannedCodes[1] }}</div>
       <div>{{ scannedCodes[2] }}</div>
       <div>{{ scannedCodes[3] }}</div>
-    </section>
+    </div>
   </main>
 </template>
 

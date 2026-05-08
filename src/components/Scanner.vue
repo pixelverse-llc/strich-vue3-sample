@@ -4,7 +4,7 @@ import { BarcodeReader, type CodeDetection, type Configuration } from "@pixelver
 
 // define a 'detected' event that the Scanner component emits when barcodes are detected
 const emit = defineEmits<{
-  (e: 'detected', detections: CodeDetection[]): void
+  detected: [detections: CodeDetection[]]
 }>();
 
 // bind to the host element that will contain the BarcodeScanner

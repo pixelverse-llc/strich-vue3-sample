@@ -31,7 +31,7 @@ function finishScanning() {
 <template>
   <main class="wrapper">
     <header class="top-bar">
-      <h3>Repeated Scans</h3>
+      <h1>Repeated Scans</h1>
       <RouterLink to="/">EXIT</RouterLink>
     </header>
     <Scanner ref="scanner" @detected="onDetected"/>

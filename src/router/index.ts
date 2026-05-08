@@ -4,6 +4,8 @@ import HomeView from '@/views/HomeView.vue'
 import ScanSingle from "@/views/ScanSingle.vue";
 import ScanRepeated from "@/views/ScanRepeated.vue";
 import ScanMultiple from "@/views/ScanMultiple.vue";
+import ScanPopup from '@/views/ScanPopup.vue';
+
 import { StrichSDK } from "@pixelverse/strichjs-sdk";
 
 /**
@@ -45,6 +47,11 @@ const router = createRouter({
         {
             path: '/scan-multiple',
             component: ScanMultiple,
+            beforeEnter: [ensureStrichSDKInitialized]
+        },
+        {
+            path: '/scan-popup',
+            component: ScanPopup,
             beforeEnter: [ensureStrichSDKInitialized]
         }
     ]
