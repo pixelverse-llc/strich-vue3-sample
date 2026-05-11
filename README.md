@@ -1,27 +1,16 @@
 # STRICH SDK Vue 3 sample code
 
-This repository shows how to integrate STRICH SDK into a Vue 3 project.
-You need a valid license key to run this sample. To get started with STRICH SDK, check out to the [Getting Started](https://docs.strich.io/getting-started.html) guide.
+This repository shows how to integrate STRICH SDK into a Vue 3 project. The project was created using `npm create vue@latest `.
 
-To start the development server, run `npm run dev`. 
+You will need a valid license key to run this sample. To get started with STRICH SDK, check out to the [Getting Started](https://docs.strich.io/getting-started.html) guide.
 
-The project was created using the following commands/selections:
+To start the development server, run `npm install` followed by `npm run dev`. 
 
-```shell
-% npm create vue@latest   
-Need to install the following packages:
-create-vue@3.10.1
-Ok to proceed? (y) y
+There is a [PDF test sheet](test-sheet.pdf) included in this repository for testing. If you need to create your own barcodes, use [Barcode.new](https://barcode.new) or an alternative barcode generator.
 
-Vue.js - The Progressive JavaScript Framework
+## Testing with a Smartphone
 
-✔ Project name: … strich-vue3-sample
-✔ Add TypeScript? … Yes
-✔ Add JSX Support? … No
-✔ Add Vue Router for Single Page Application development? … Yes
-✔ Add Pinia for state management? … No
-✔ Add Vitest for Unit Testing? … No
-✔ Add an End-to-End Testing Solution? › No
-✔ Add ESLint for code quality? … No
-✔ Add Vue DevTools extension for debugging? (experimental) … No
-```
+You are likely developing a smartphone app, and since the development server is only available on localhost, you will have trouble connecting to it.
+
+We recommend using tools like [Ngrok](https://ngrok.com) that expose your local development server on a public address that you can easily access via your smartphone, see our section [Testing on a Smartphone](https://docs.strich.io/getting-started.html#testing-on-a-smartphone).
+
