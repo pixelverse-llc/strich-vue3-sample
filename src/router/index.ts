@@ -21,6 +21,7 @@ async function ensureStrichSDKInitialized() {
             await StrichSDK.initialize(licenseKey);
             return true;
         } catch (e) {
+            console.error(`Failed to initialize SDK: ${e.message}`);
             return '/'; // navigate home, you probably want to handle this differently
         }
     }
